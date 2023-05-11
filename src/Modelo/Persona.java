@@ -23,7 +23,6 @@ public class Persona {
         System.out.println("TELEFONO: "+telefono);
         caminar();
         hablar();
-
     }
 
     public String getCedula() {

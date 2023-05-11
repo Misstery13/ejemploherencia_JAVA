@@ -7,9 +7,9 @@ import java.util.Scanner;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static Scanner scan = new Scanner(System.in).useDelimiter("\n");
-    public static ArrayList<Persona> listapersonas = new ArrayList<Persona>();
-    public static ArrayList<Estudiante> listaestudiantes = new ArrayList<Estudiante>();
-    public static ArrayList<Profesor> listaproductos = new ArrayList<Profesor>();
+    public static ArrayList<Persona> listapersonas = new ArrayList<>();
+    public static ArrayList<Estudiante> listaestudiantes = new ArrayList<>();
+    public static ArrayList<Profesor> listaprofesores = new ArrayList<>();
     public static void main(String[] args) {
         int op;
         do {
@@ -101,14 +101,12 @@ public class Main {
                 System.out.println("Ingrese el sueldo: ");
                 sueldo = scan.nextInt();
                 Profesor objPr = new Profesor(ced,nom,ape,fono,sueldo);
-                System.out.println("CEDULA: "+objPr.getCedula());
-                System.out.println("NOMBRES: "+objPr.getNombres());
-                System.out.println("APELLIDOS: "+objPr.getApellidos());
-                System.out.println("TELEFONO: "+objPr.getTelefono());
-                System.out.println("SUELDO: "+objPr.getSueldo());
-                objPr.caminar();
-                objPr.hablar();
-                objPr.enseniar();
+                listaprofesores.add(objPr);
+                break;
+            }
+            case 6: {
+                System.out.println("DATOS DEL PROFESOR");
+                listar_profesores();
                 break;
             }
         }
@@ -124,6 +122,13 @@ public class Main {
     public static void listar_estudiantes() {
         for (int i = 0; i < listaestudiantes.size(); i++) {
             listaestudiantes.get(i).mostrarEstudiante();
+            System.out.println(" ");
+        }
+    }
+
+    public static void listar_profesores() {
+        for (int i = 0; i < listaprofesores.size(); i++) {
+            listaprofesores.get(i).mostrarProfesor();
             System.out.println(" ");
         }
     }
