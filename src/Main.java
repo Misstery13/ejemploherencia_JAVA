@@ -24,11 +24,11 @@ public class Main {
         int respuesta;
         do {
             System.out.println("Registre");
-            System.out.println("1: Registrar personas");
+            System.out.println("1: Registrar persona");
             System.out.println("2: Listar personas");
             System.out.println("3: Registrar estudiante");
-            System.out.println("4: Listar estudiante");
-            System.out.println("5: Registrar profesores");
+            System.out.println("4: Listar estudiantes");
+            System.out.println("5: Registrar profesor");
             System.out.println("6: Listar profesores");
             System.out.println("Elija la operacion: ");
             respuesta = scan.nextInt();
@@ -40,7 +40,7 @@ public class Main {
         String ced,nom,ape,fono;
         switch (op) {
             case 1: {
-                System.out.println("---CREAR UNA PERSONA---");
+                System.out.println("---REGISTRE UNA PERSONA---");
                 scan.nextLine();
                 System.out.println("Ingrese la cédula: ");
                 //objP.setCedula(scan.nextLine());
@@ -62,7 +62,7 @@ public class Main {
                 break;
             }
             case 3: {
-                System.out.println("CREAR OBJETO ESTUDIANTE");
+                System.out.println("---REGISTRE UN ESTUDIANTE---");
                 scan.nextLine();
                 System.out.println("Ingrese la cédula: ");
                 ced= scan.nextLine();
@@ -87,7 +87,7 @@ public class Main {
                 break;
             }
             case 5: {
-                System.out.println("CREAR OBJETO PROFESOR");
+                System.out.println("---REGISTRE UN PROFESOR---");
                 scan.nextLine();
                 System.out.println("Ingrese la cédula: ");
                 ced= scan.nextLine();
@@ -97,9 +97,9 @@ public class Main {
                 ape= scan.nextLine();
                 System.out.println("Ingrese el telefono: ");
                 fono= scan.nextLine();
-                int sueldo;
+                float sueldo;
                 System.out.println("Ingrese el sueldo: ");
-                sueldo = scan.nextInt();
+                sueldo = scan.nextFloat();
                 Profesor objPr = new Profesor(ced,nom,ape,fono,sueldo);
                 listaprofesores.add(objPr);
                 break;

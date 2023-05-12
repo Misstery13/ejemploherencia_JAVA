@@ -8,16 +8,7 @@ public class Profesor extends Persona {
             this.sueldo = sueldo;
         }
 
-        public void mostrarProfesor() {
-            System.out.println("CEDULA: "+getCedula());
-            System.out.println("NOMBRES: "+getNombres());
-            System.out.println("APELLIDOS: "+getApellidos());
-            System.out.println("TELEFONO: "+getTelefono());
-            System.out.println("SUELDO: "+getSueldo());
-            caminar();
-            hablar();
-            enseniar();
-        }
+
 
         public float getSueldo() {
             return sueldo;
@@ -26,6 +17,17 @@ public class Profesor extends Persona {
         public void setSueldo(float sueldo) {
             this.sueldo = sueldo;
         }
+
+    public void mostrarProfesor() {
+        System.out.println("CEDULA: "+getCedula());
+        System.out.println("NOMBRES: "+getNombres());
+        System.out.println("APELLIDOS: "+getApellidos());
+        System.out.println("TELEFONO: "+getTelefono());
+        System.out.println("SUELDO: "+getSueldo());
+        caminar();
+        hablar();
+        enseniar();
+    }
         public void enseniar() {
             System.out.println("Profesor: enseñar desde la clase profesor");
         }
