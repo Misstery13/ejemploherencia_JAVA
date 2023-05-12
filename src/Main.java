@@ -23,7 +23,7 @@ public class Main {
     public static int menu() {
         int respuesta;
         do {
-            System.out.println("Registre");
+            System.out.println("----------MENÚ----------");
             System.out.println("1: Registrar persona");
             System.out.println("2: Listar personas");
             System.out.println("3: Registrar estudiante");
